@@ -1,0 +1,49 @@
+:root {
+  --primary: #ff6b6b;
+  --secondary: #4ecdc4;
+  --accent: #ffd166;
+  --dark: #1a1a2e;
+  --light: #f8f9fa;
+  --glass: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px rgba(106, 13, 173, 0.3);
+  --text-primary: #1a1a2e;
+  --text-secondary: #495057;
+  --gradient-start: #6a0dad;
+  --gradient-end: #ff6b6b;
+}
+
+.dark-mode {
+  --primary: #ffd166;
+  --secondary: #4ecdc4;
+  --dark: #f8f9fa;
+  --light: #1a1a2e;
+  --glass: rgba(26, 26, 46, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --gradient-start: #16213e;
+  --gradient-end: #1a1a2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  scrollbar-width: none;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+  min-height: 100svh;
+  color: var(--text-primary);
+  overflow-x: hidden;
+  position: relative;
+}

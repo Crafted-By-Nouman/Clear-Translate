@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ClearTranslate | Simple. Fast. Accurate.</title>
+    <meta
+      name="description"
+      content="Translate text instantly with our powerful and user-friendly language translation tool. Supports multiple languages, speech recognition, copy, and voice playback." />
+    <meta
+      name="keywords"
+      content="translator, language translator, online translation, translate text, speech recognition, voice translator, multilingual, text-to-speech" />
+    <meta name="author" content="Translator Team" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:title"
+      content="Translator | Free Online Language Translation Tool" />
+    <meta
+      property="og:description"
+      content="Instantly translate text between languages. Free, accurate, and easy-to-use language translator with voice features." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/assets/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Translator | Free Online Language Translation Tool" />
+    <meta
+      name="twitter:description"
+      content="Translate text in seconds using our free language translator. Supports voice input and playback." />
+    <meta
+      name="twitter:image"
+      content="https://yourwebsite.com/assets/twitter-image.jpg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="#" class="logo" aria-label="Translator Home">
+          <i class="fas fa-language" aria-hidden="true"></i>
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+      </header>
+
+      <main>
+        <div class="translator-container">
+          <div class="input-section">
+            <div class="language-selector">
+              <select id="fromLanguage"></select>
+            </div>
+            <div class="text-box">
+              <textarea
+                class="from-text"
+                placeholder="Enter text to translate..."></textarea>
+              <button
+                class="mic-btn tooltip"
+                id="micBtn"
+                aria-label="Start Speech Recognition">
+                <i class="fas fa-microphone"></i>
+                <span class="tooltiptext">Speech Recognition</span>
+              </button>
+              <div class="controls">
+                <button
+                  class="tooltip"
+                  id="copyFrom"
+                  aria-label="Copy Input Text">
+                  <i class="fas fa-copy"></i>
+                  <span class="tooltiptext">Copy text</span>
+                </button>
+                <button
+                  class="tooltip"
+                  id="speakFrom"
+                  aria-label="Speak Input Text">
+                  <i class="fas fa-volume-up"></i>
+                  <span class="tooltiptext">Speak text</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button class="swap-btn" id="swapBtn" aria-label="Swap Languages">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
+
+          <div class="output-section">
+            <div class="language-selector">
+              <select id="toLanguage"></select>
+            </div>
+            <div class="output-box">
+              <div class="text to-text" id="translatedText"></div>
+              <div class="loading" id="loadingSpinner">
+                <div class="spinner"></div>
+              </div>
+              <div class="controls">
+                <button
+                  class="tooltip"
+                  id="copyTo"
+                  aria-label="Copy Translation">
+                  <i class="fas fa-copy"></i>
+                  <span class="tooltiptext">Copy translation</span>
+                </button>
+                <button
+                  class="tooltip"
+                  id="speakTo"
+                  aria-label="Speak Translation">
+                  <i class="fas fa-volume-up"></i>
+                  <span class="tooltiptext">Speak translation</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="translate-btn"
+            id="translateBtn"
+            aria-label="Translate Text">
+            <span>Translate</span>
+          </button>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Translator. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/script/main.js"></script>
+  </body>
+</html>
